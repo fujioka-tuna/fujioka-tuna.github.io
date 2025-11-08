@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>生き物のデータ | 三保地引網</title>
+  <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="/common.css">
+  
+  <style>
+    .main-content .container {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .shiny-embed-container {
+        height: 85vh; 
+        padding-top: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .shiny-embed-container iframe {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title lang-ja">生き物のデータ</h1>
+        <h1 class="page-title lang-en" style="display:none;">Catch Data</h1>
+        <p class="page-subtitle lang-ja">地引網でとれた生き物のインタラクティブなデータベースです。</p>
+        <p class="page-subtitle lang-en" style="display:none;">An interactive database of creatures caught in the beach seine.</p>
+    </div>
+    
+    <div class="main-content">
+        <div class="container">
+            
+            <div class="shiny-embed-container">
+                <iframe src="https://chee678.shinyapps.io/MihoBeachSeine/">
+                    <p>お使いのブラウザは iframe をサポートしていません。</p>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/common.js"></script>
+
+</body>
+</html>
