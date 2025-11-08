@@ -538,6 +538,18 @@ a {
   .hamburger-menu {
     display: flex;
   }
+
+  .logo-container .logo-img {
+    height: 40px;
+    min-height: 40px;
+    width: auto;
+  }
+
+  .logo-container .logo-link,
+  .logo-container #fujioka-logo {
+    flex-shrink: 0;
+  }
+
   #main-nav {
     display: block;
     position: fixed;
@@ -612,5 +624,6 @@ a {
     background-color: #005f6b;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
 }
 }
