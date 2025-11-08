@@ -552,8 +552,11 @@ a {
     max-width: 100%;
   }
 
-  .logo-container .logo-link,
-  .logo-container #fujioka-logo {
+  #fujioka-logo {
+    display: none;
+  }
+
+  .logo-container .logo-link {
     flex-shrink: 0;
   }
 
