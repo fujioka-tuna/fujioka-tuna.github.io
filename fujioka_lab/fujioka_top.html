@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>東海大学の調査内容 | 三保地引網</title>
+  <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
+  
+  <link rel="stylesheet" href="/common.css">
+  
+  <style>
+    .main-content {
+        background-color: var(--bg-content);
+        padding: 4rem 0;
+    }
+    
+    .page-header {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #e3d9cd;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .content-section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-section:last-child {
+        border-bottom: none;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    .profile-text h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+    }
+    .profile-text p {
+        margin-top: 0.5rem;
+    }
+    .profile-text a {
+        color: var(--accent-color);
+        text-decoration: underline;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    .profile-text a:hover {
+        color: #005f6b;
+    }
+
+    .method-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .method-card {
+        text-align: center;
+    }
+    .method-card img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+    .method-card h4 {
+        font-size: 1.2rem;
+        color: var(--text-primary);
+    }
+
+    /* === CSSを変更 === */
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 アスペクト比 */
+      border-radius: 8px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* 2つ目の動画コンテナとの間隔を空ける */
+    .video-container + .video-container {
+        margin-top: 2.5rem;
+    }
+    /* === /CSSを変更 === */
+    
+    @media (max-width: 992px) {
+      .profile-section {
+          flex-direction: column;
+          text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title lang-ja">東海大学の活動内容</h1>
+        <h1 class="page-title lang-en" style="display:none;">Tokai University Activities</h1>
+        <p class="page-subtitle lang-ja">地引網で科学する、藤岡研究室の取り組み</p>
+        <p class="page-subtitle lang-en" style="display:none;">The Fujioka Laboratory's approach to science with beach seining</p>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <section class="content-section">
+                <h2 class="section-title lang-ja">なにをしらべている？</h2>
+                <h2 class="section-title lang-en" style="display:none;">What Are We Researching?</h2>
+                <p class="lang-ja">海の生き物は、大きくわけて<b>泳ぐもの・漂うもの・海底にじっとするもの</b>の3種類に分けられます。私たちは「泳ぐもの」に興味があり、特に魚類について調べています。魚類は泳ぐことによって、自分が適している場所を選択することができます。それは、冬の低水温や夏の高水温を避けることであったり、卵を産むのに適した場所へ向かうことであったりします。地引網を使って、時期・環境の変化で獲れる魚がどのように変わるのかを調べ、魚の生態を明らかにしようと考えています。</p>
+                <p class="lang-en" style="display:none;">Marine creatures can be broadly divided into three types: <b>swimmers, drifters, and bottom-dwellers</b>. We are interested in the "swimmers," especially fish. Fish can choose suitable locations by swimming, whether it's to avoid cold winter or hot summer temperatures, or to find a good place to lay eggs. Using the beach seine, we aim to clarify the ecology of fish by investigating how the catch changes with seasonal and environmental shifts.</p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title lang-ja">どうやって調べている？</h2>
+                <h2 class="section-title lang-en" style="display:none;">How Are We Researching?</h2>
+                <div class="method-grid">
+                    <div class="method-card">
+                        <img src="/fujioka_lab/field_photo.jpg" alt="フィールドでの作業風景">
+                        <h4 class="lang-ja">フィールドでの作業</h4>
+                        <h4 class="lang-en" style="display:none;">Field Work</h4>
+                        <p class="lang-ja">地引網でとれた魚を種類ごとに分け、数を数え、大きさを測定します。</p>
+                        <p class="lang-en" style="display:none;">We sort the fish caught by the beach seine, count them, and measure their sizes.</p>
+                    </div>
+                    <div class="method-card">
+                        <img src="/fujioka_lab/gazokaiseki.jpg" alt="画像処理による魚の体長算出">
+                        <h4 class="lang-ja">画像処理による体長測定</h4>
+                        <h4 class="lang-en" style="display:none;">Length Measurement via Image Processing</h4>
+                        <p class="lang-ja">撮影した写真から、コンピュータを使って正確な魚の大きさを測ります。</p>
+                        <p class="lang-en" style="display:none;">We use computers to accurately measure fish sizes from the photographs taken.</p>
+                    </div>
+                    <div class="method-card">
+                        <img src="https://via.placeholder.com/400x250/007a8a/ffffff?text=Data+Analysis" alt="データ解析のイメージ">
+                        <h4 class="lang-ja">データ解析</h4>
+                        <h4 class="lang-en" style="display:none;">Data Analysis</h4>
+                        <p class="lang-ja">集めたデータと海の環境データを組み合わせて、魚の生態を統計的に分析します。</p>
+                        <p class="lang-en" style="display:none;">We statistically analyze fish ecology by combining the collected data with marine environmental data.</p>
+                    </div>
+                </div>
+
+                </section>
+
+            <section class="content-section">
+                <h2 class="section-title lang-ja">調査風景の動画</h2>
+                <h2 class="section-title lang-en" style="display:none;">Research Videos</h2>
+
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/gUw6IAsVkTQ" 
+                        title="調査風景の動画" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </section>
+            <section class="content-section">
+                <div class="profile-section">
+                    <img src="/fujioka_lab/fujioka_ko.jpg" alt="藤岡紘 准教授" class="profile-image">
+                    <div class="profile-text">
+                        <h3 class="lang-ja">東海大学海洋学部海洋生物学科 藤岡研究室 
+                          <br>藤岡 紘</h3>
+                        <h3 class="lang-en" style="display:none;">Tokai University Fujioka Laboratory 
+                          <br> Associate Professor Ko Fujioka</h3>
+                        <p class="lang-ja">主にマグロやカジキといった高度回遊性魚類の研究を行っています。
+                          <br>静岡県清水の三保にいる身近な生き物について調べるために、2024年度から三保地引網保存会と協力をして調査を開始しました。</p>
+                        <p class="lang-en" style="display:none;">My primary research focuses on highly migratory species like tuna and billfish. 
+                          <br>Starting in 2024, we began collaborating with the Miho Jibikiami Preservation Society to study the familiar marine life here in Miho, Shimizu.</p>
+                        <a href="https://www.u-tokai.ac.jp/facultyguide/faculty/44152/" target="_blank" rel="noopener">教員紹介ページへ</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/common.js"></script>
+
+</body>
+</html>
