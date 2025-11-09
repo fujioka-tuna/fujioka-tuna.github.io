@@ -232,6 +232,9 @@ a {
     line-height: 1.4;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
+.hero-subtitle {
+  white-space: nowrap;
+}
 .page-header {
     text-align: center;
     padding: 3rem 0;
