@@ -515,15 +515,17 @@ a {
     padding-top: 2rem;
     border-top: 1px solid #444;
 }
-.calendar-embed-container {
+.calendar-embed-container,
+.shiny-embed-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 75%;
     border: 1px solid var(--border-color);
     border-radius: 8px;
+    padding-top: 75%;
 }
-.calendar-embed-container iframe {
+.calendar-embed-container iframe,
+.shiny-embed-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -534,6 +536,26 @@ a {
     border: 0;
 }
 
+.reservation-link-container {
+  margin-top: 1.5rem;
+}
+.reservation-link {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.reservation-link:hover {
+  background-color: #005f6b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 992px) {
   .container { padding: 0 1.5rem; }
   .header-inner .navbar {
@@ -542,27 +564,22 @@ a {
   .hamburger-menu {
     display: flex;
   }
-
   .header-left {
     max-width: 100%;
     box-sizing: border-box;
   }
-
   .logo-container .logo-img {
     height: 40px;
     min-height: 40px;
     width: auto;
     max-width: 100%;
   }
-
   #fujioka-logo {
     display: none;
   }
-
   .logo-container .logo-link {
     flex-shrink: 0;
   }
-
   #main-nav {
     display: block;
     position: fixed;
@@ -617,25 +634,18 @@ a {
       width: auto;
   }
   .footer-grid { grid-template-columns: 1fr; text-align: center; }
-  .reservation-link-container {
-    margin-top: 1.5rem;
-}
 
-.reservation-link {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: var(--accent-color);
-    color: var(--text-light);
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.reservation-link:hover {
-    background-color: #005f6b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
+  /* === ここからスマホ用の文字サイズ修正 === */
+  .page-title {
+      font-size: 1.8rem;
+  }
+  .section-title {
+      font-size: 1.6rem;
+  }
+  .card-title {
+      font-size: 1.15rem;
+  }
+  .recipe-title {
+      font-size: 1.5rem;
+  }
 }
