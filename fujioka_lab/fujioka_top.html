@@ -8,117 +8,103 @@
   
   <link rel="stylesheet" href="/common.css">
   
-  <style>
-    .main-content {
-        background-color: var(--bg-content);
-        padding: 4rem 0;
-    }
-    
-    .page-header {
-        text-align: center;
-        padding: 3rem 0;
-        background-color: #e3d9cd;
-    }
+ <style>
+  .main-content {
+      background-color: var(--bg-content);
+      padding: 4rem 0;
+  }
+  
+  .page-header {
+      text-align: center;
+      padding: 3rem 0;
+      background-color: #e3d9cd;
+  }
 
-    .page-title {
-        font-size: 2.5rem;
-        color: var(--text-primary);
-        margin-bottom: 0.5rem;
-    }
+  .content-section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-color);
+  }
+  .content-section:last-child {
+      border-bottom: none;
+  }
 
-    .page-subtitle {
-        font-size: 1rem;
-        color: var(--text-secondary);
-    }
+  .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+  .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+  }
+  .profile-text h3 {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+  }
+  .profile-text p {
+      margin-top: 0.5rem;
+  }
+  .profile-text a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.3s;
+  }
+  .profile-text a:hover {
+      color: #005f6b;
+  }
 
-    .content-section {
-        padding: 4rem 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .content-section:last-child {
-        border-bottom: none;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        color: var(--text-primary);
-        margin-bottom: 2rem;
-        text-align: center;
-        font-weight: 600;
-    }
-    
-    .profile-section {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-    .profile-image {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        flex-shrink: 0;
-    }
-    .profile-text h3 {
-        font-size: 1.5rem;
-        color: var(--text-primary);
-    }
-    .profile-text p {
-        margin-top: 0.5rem;
-    }
-    .profile-text a {
-        color: var(--accent-color);
-        text-decoration: underline;
-        font-weight: 500;
-        transition: color 0.3s;
-    }
-    .profile-text a:hover {
-        color: #005f6b;
-    }
-
-    .method-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-    .method-card {
-        text-align: center;
-    }
-    .method-card img {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-    }
-    .method-card h4 {
-        font-size: 1.2rem;
-        color: var(--text-primary);
-    }
-
-    /* === CSSを変更 === */
-    .video-container {
-      position: relative;
-      overflow: hidden;
+  .method-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+  }
+  .method-card {
+      text-align: center;
+  }
+  .method-card img {
       width: 100%;
-      padding-top: 56.25%; /* 16:9 アスペクト比 */
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
       border-radius: 8px;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    /* 2つ目の動画コンテナとの間隔を空ける */
-    .video-container + .video-container {
-        margin-top: 2.5rem;
-    }
-    /* === /CSSを変更 === */
+      margin-bottom: 1rem;
+  }
+  .method-card h4 {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+  }
 
-  </style>
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 アスペクト比 */
+    border-radius: 8px;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .video-container + .video-container {
+      margin-top: 2.5rem;
+  }
+  
+  @media (max-width: 992px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+  }
+</style>
+
+  
 </head>
 <body>
 
