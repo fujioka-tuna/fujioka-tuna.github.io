@@ -2,13 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale-1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>地引網とは？ | 三保地引網</title>
   <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/common.css">
 
   <style>
-    /* ページの基本レイアウト（common.cssにある想定） */
     .page-header {
         text-align: center;
         padding: 3rem 0;
@@ -64,7 +63,7 @@
     }
     .method-image {
         width: 300px; /* 画像の幅を固定 */
-        height: 215px; /* 画像の高さを固定 */
+        height: auto; /* 高さを自動にし、比率を維持 */
         object-fit: cover;
         border-radius: 8px;
         flex-shrink: 0;
@@ -89,8 +88,8 @@
         }
         .method-image {
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 10; /* 高さを自動にし、比率を維持 */
+            height: auto; /* 高さを自動にし、比率を維持 */
+            /* aspect-ratio: 16 / 10; */ /* 元の比率を維持するため削除 */
         }
         .method-text h4 {
             font-size: 1.25rem;
