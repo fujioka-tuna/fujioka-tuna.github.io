@@ -2,10 +2,102 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale-1.0"/>
   <title>地引網とは？ | 三保地引網</title>
   <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/common.css">
+
+  <style>
+    /* ページの基本レイアウト（common.cssにある想定） */
+    .page-header {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #e3d9cd;
+    }
+    .page-title {
+        font-size: 2.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+    .main-content {
+        background-color: var(--bg-content);
+        padding: 4rem 0;
+    }
+    .content-section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-section:last-child {
+        border-bottom: none;
+    }
+    .section-title {
+        font-size: 2rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    /* このページ固有のスタイル */
+    .origin-text {
+        line-height: 1.8;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify; /* テキストを両端揃え */
+    }
+
+    .method-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem; /* 各ステップ間の余白 */
+        margin-top: 2.5rem;
+    }
+    .method-step {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    }
+    .method-image {
+        width: 300px; /* 画像の幅を固定 */
+        height: 215px; /* 画像の高さを固定 */
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    .method-text h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--accent-color); /* タイトル色 */
+        margin-bottom: 0.75rem;
+    }
+    .method-text p {
+        line-height: 1.7;
+        color: var(--text-primary);
+    }
+
+    /* スマートフォン表示 */
+    @media (max-width: 768px) {
+        .method-step {
+            flex-direction: column; /* 画像とテキストを縦積みに */
+            align-items: flex-start;
+            padding: 1rem;
+        }
+        .method-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10; /* 高さを自動にし、比率を維持 */
+        }
+        .method-text h4 {
+            font-size: 1.25rem;
+        }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -18,7 +110,69 @@
     </div>
     <div class="main-content">
         <div class="container">
-            <p>Hello world</p>
+            
+            <section class="content-section">
+                <h2 class="section-title lang-ja">地引網の起源</h2>
+                <h2 class="section-title lang-en" style="display:none;">Origin of Jibikiami</h2>
+                <p class="origin-text lang-ja">
+                    地引網漁のルーツは、古くから漁業技術の先進地であった紀州（現在の和歌山県）にあると言われています。<br><br>
+                    戦国時代の弘治元年（1555年）、紀州の漁師であった西宮久助が嵐で遭難し、九十九里浜の剃金村（現在の千葉県白子町）に漂着しました。村人たちの手厚い看護を受けた久助は、お礼として故郷の紀州熊野で行われていた地引網の技術を伝えました。<br><br>
+                    その後、様々な形で全国へと広まっていきました。
+                </p>
+                <p class="origin-text lang-en" style="display:none;">
+                    The roots of beach seining (Jibikiami) are said to lie in Kishu (present-day Wakayama Prefecture), which has long been an advanced center for fishing technology.<br><br>
+                    In 1555, during the Sengoku period, a Kishu fisherman named Kyusuke Nishinomiya was shipwrecked in a storm and washed ashore at Sorigane Village on Kujukuri Beach (present-day Shirako Town, Chiba Prefecture). In gratitude for the villagers' dedicated care, Kyusuke taught them the beach seining techniques used in his hometown of Kishu Kumano.<br><br>
+                    From there, the technique spread throughout Japan in various forms.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title lang-ja">地引網の漁業方法</h2>
+                <h2 class="section-title lang-en" style="display:none;">How Jibikiami Works</h2>
+
+                <div class="method-list">
+                    <div class="method-step">
+                        <img src="/images/step1.jpg" alt="船に網を積む様子" class="method-image">
+                        <div class="method-text">
+                            <h4 class="lang-ja">① 準備</h4>
+                            <h4 class="lang-en" style="display:none;">1. Preparation</h4>
+                            <p class="lang-ja">網の両端についたロープの片方を海岸で固定し、もう一方のロープと網を船に積む。</p>
+                            <p class="lang-en" style="display:none;">Secure one end of the rope on the beach, and load the other rope and the net onto the boat.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <img src="/images/step2.jpg" alt="船で網を張る様子" class="method-image">
+                        <div class="method-text">
+                            <h4 class="lang-ja">② 網を張る</h4>
+                            <h4 class="lang-en" style="display:none;">2. Casting the Net</h4>
+                            <p class="lang-ja">海岸に固定したロープを垂らしながら、海岸から離れるように船を走らせ、弧をえがくように網をはる。</p>
+                            <p class="lang-en" style="display:none;">While paying out the secured rope, the boat moves away from the shore, setting the net in a large arc.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <img src="/images/step3.jpg" alt="船が海岸に戻る様子" class="method-image">
+                        <div class="method-text">
+                            <h4 class="lang-ja">③ 帰港</h4>
+                            <h4 class="lang-en" style="display:none;">3. Returning to Shore</h4>
+                            <p class="lang-ja">網を配置した後に、積んだロープを垂らしながら海岸に持って帰る。</p>
+                            <p class="lang-en" style="display:none;">After the net is fully deployed, the boat brings the second rope back to the beach.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <img src="/images/step4.jpg" alt="網を引く様子" class="method-image">
+                        <div class="method-text">
+                            <h4 class="lang-ja">④ 網を引く</h4>
+                            <h4 class="lang-en" style="display:none;">4. Hauling the Net</h4>
+                            <p class="lang-ja">その両方のロープを海岸で引き、網を左右均等に引くようにして、魚たちを追い込んでいく。</p>
+                            <p class="lang-en" style="display:none;">Both ropes are then pulled from the shore, hauling the net evenly to herd and catch the fish.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
   </main>
