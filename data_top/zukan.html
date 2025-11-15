@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>三保の生き物図鑑 | 三保地引網</title>
+  <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
+  
+  <link rel="stylesheet" href="/common.css">
+  
+  <style>
+    .main-content {
+        background-color: var(--bg-content);
+        padding: 4rem 0;
+    }
+    
+    .page-header {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #e3d9cd;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+    }
+
+    .content-section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .content-section:last-child {
+        border-bottom: none;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    /* === 図鑑ページ専用CSS === */
+
+    .fish-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+        margin-bottom: 3rem;
+        overflow: hidden; /* 角丸を効かせるため */
+    }
+    
+    .photo-gallery {
+        display: flex;
+        overflow-x: auto; /* 写真を横スクロール */
+        scroll-snap-type: x mandatory; /* スクロールをスナップ */
+        gap: 8px; /* 写真間の隙間 */
+        padding: 8px;
+        background-color: #f4f7f6; /* ギャラリーの背景色 */
+    }
+
+    .photo-gallery img {
+        width: 80%; /* 画面幅の80% */
+        max-width: 350px; /* PCでの最大幅 */
+        height: 240px;
+        object-fit: cover;
+        border-radius: 8px;
+        scroll-snap-align: center; /* 中央でスナップ */
+    }
+
+    .fish-content {
+        padding: 1.5rem 2rem;
+    }
+
+    .fish-content h3 {
+        font-size: 1.75rem;
+        color: var(--text-primary);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid var(--accent-color);
+        display: inline-block;
+        padding-bottom: 0.25rem;
+    }
+
+    .fish-details {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .fish-details dt {
+        font-weight: 600;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+    .fish-details dd {
+        margin-left: 0;
+        color: var(--text-primary);
+        line-height: 1.7;
+    }
+    
+    /* --- 毒魚セクション --- */
+    .toxic-title {
+        color: #c0392b; /* 警告色 */
+    }
+    .toxic-warning {
+        background-color: #fbeee
+        color: #c0392b;
+        border: 1px solid #e74c3c;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title lang-ja">三保の生き物図鑑</h1>
+        <h1 class="page-title lang-en" style="display:none;">Miho Creature Guide</h1>
+        <p class="page-subtitle lang-ja">地引網で獲れる生き物たち</p>
+        <p class="page-subtitle lang-en" style="display:none;">Creatures caught with the beach seine</p>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+
+            <section class="content-section">
+                
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/EB5757/FFFFFF?text=Madai+1" alt="マダイの写真 1">
+                        <img src="https://via.placeholder.com/350x240/EB5757/FFFFFF?text=Madai+2" alt="マダイの写真 2">
+                    </div>
+                    <div class="fish-content">
+                        <h3>マダイ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>背鰭が延長しない。尾鰭後縁は黒く、下縁は白い。体色は赤みが強く、体背部にある青色の斑点は成魚になると少なくなる。鰓蓋の後縁が鮮血色を呈することはない。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道全沿岸~九州南岸の日本海・東シナ海・太平洋沿岸に広く分布している。朝鮮半島南部、南シナ海、台湾にも分布している。</dd>
+                            <dt>生息環境</dt>
+                            <dd>水深30~200mの岩礁、砂礫底、砂底</dd>
+                            <dt>産卵期</dt>
+                            <dd>春~初夏</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4~12月頃。6月頃に沢山獲ることができる。7月頃以降は獲れることが少なくなる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/F2994A/FFFFFF?text=Chidai+1" alt="チダイの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>チダイ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>背鰭第3・4棘はやや糸状に伸びている。鰓膜の鮮紅色部の幅が広い。
+                            尾鰭後縁は黒くない。体色は全体に淡いピンク、銀色が強い。体側に薄い縦の線があり、青い小さな斑点が散在。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道南部~九州南岸の日本海・東シナ海・太平洋沿岸、瀬戸内海、朝鮮半島南部に広く分布している。</dd>
+                            <dt>生息環境</dt>
+                            <dd>大陸棚上の岩礁、砂礫底、砂底。</dd>
+                            <dt>産卵期</dt>
+                            <dd>9~11月頃</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>5~6月頃と9~11月頃。9~10月頃に多く獲れている。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/BDBDBD/FFFFFF?text=Hedai+1" alt="ヘダイの写真 1">
+                        <img src="https://via.placeholder.com/350x240/BDBDBD/FFFFFF?text=Hedai+2" alt="ヘダイの写真 2">
+                    </div>
+                    <div class="fish-content">
+                        <h3>ヘダイ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体型は左右に平たい楕円形。銀白色の魚体に何本も縦線が走っており、腹鰭と臀鰭の色は若魚で特に黄色っぽい。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道日本海沿岸、新潟県~九州南岸の日本海・東シナ海沿岸、宮城県~九州南岸の太平洋沿岸、瀬戸内海、屋久島・琉球列島と日本近海に広く分布。またアフリカ東部から本州中部、オーストラリア沿岸などの亜熱帯・温帯海域に広く分布する。</dd>
+                            <dt>生息環境</dt>
+                            <dd>沿岸の岩礁や内湾</dd>
+                            <dt>産卵期</dt>
+                            <dd>晩春~初夏</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4~9月頃。6月頃以降になると、獲れなくなる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/4F4F4F/FFFFFF?text=Mutsu+1" alt="ムツの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>ムツ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体色は成魚が金紫褐色で、幼魚はやや金色を有する。尾鰭の縁辺は黒っぽい。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道~九州南岸の太平洋沿岸、北海道~九州南岸の日本海・東シナ海沿岸。九州~パラオ海嶺。朝鮮半島南岸~台湾。</dd>
+                            <dt>生息環境</dt>
+                            <dd>幼魚は沿岸の浅所によく見られるが、成魚は200~700mの岩礁に生息するようになる。</dd>
+                            <dt>産卵期</dt>
+                            <dd>秋~春</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4月頃に稚魚や幼魚が大量に漁獲される。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/56CCF2/FFFFFF?text=Maaji+1" alt="マアジの写真 1">
+                        <img src="https://via.placeholder.com/350x240/56CCF2/FFFFFF?text=Maaji+2" alt="マアジの写真 2">
+                        <img src="https://via.placeholder.com/350x240/56CCF2/FFFFFF?text=Maaji+3" alt="マアジの写真 3">
+                    </div>
+                    <div class="fish-content">
+                        <h3>マアジ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>稜鱗は大きく、側線の全体にある。小離鰭は無い。側線が胸鰭の先端より前で急激にカーブする。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道全沿岸~九州南岸の日本海・東シナ海・太平洋沿岸、瀬戸内海。朝鮮半島全沿岸~南シナ海沿岸。</dd>
+                            <dt>生息環境</dt>
+                            <dd>大陸棚域を含む沖合~沿岸の中・下層。幼魚は内湾に進入してくる。稚魚は浮遊性が強く、表層にいる。</dd>
+                            <dt>産卵期</dt>
+                            <dd>水温16℃から22℃の範囲で行われ、16℃から17℃で最も活発である。主要な産卵場は東シナ海にあると考えられている。 太平洋沿岸でも産卵を行っており,紀伊水道外域や宿毛湾では冬から初夏までの半年近くに及ぶが ,伊豆や相模湾では初夏に限られている。</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4~11月頃。4月頃に稚魚や幼魚が沢山獲れる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/F2C94C/FFFFFF?text=Kaiwari+1" alt="カイワリの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>カイワリ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体色は背部が暗青色、体側から腹部にかけては銀白色。稜鱗は側線直走部全体にある。腹鰭、臀鰭、尾鰭がやや黄色 。・幼魚は、体側に6本~8本の暗褐色をした横帯があるが、成長すると消失する。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道以南の各地、東シナ海。~朝鮮半島、中国、台湾、インド-太平洋域に局所的に分布する。</dd>
+                            <dt>生息環境</dt>
+                            <dd>砂泥域の底層。</dd>
+                            <dt>産卵期</dt>
+                            <dd>5~10月(東シナ海)、9~11月(豊後水道や日向灘などの海域)</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>6~9月頃。特に6月に多くに漁獲される。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/F2C94C/FFFFFF?text=Shimaaji+1" alt="シマアジの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>シマアジ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>脂瞼は発達しない。生時、体側中央に黄色縦帯がある。背鰭と臀鰭の最後の軟条は小離鰭状である。</dd>
+                            <dt>分布域</dt>
+                            <dd>青森県~九州南岸の太平洋沿岸、新潟県~九州北岸の日本海。九州西岸~台湾。ほぼ全世界の温帯海域。</dd>
+                            <dt>生息環境</dt>
+                            <dd>沿岸200m以浅の中・下層。</dd>
+                            <dt>産卵期</dt>
+                            <dd>日本周辺では秋〜冬が中心。水温20℃前後に下がるタイミングで活発化する。</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>水温が高くなる6~8月頃に多くなる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/828282/FFFFFF?text=Konoshiro+1" alt="コノシロの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>コノシロ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>背鰭軟条の後方の鰭が糸状に伸長し、鰓蓋の後方には大きな暗色班が1つある。体側背面は灰青色で体側腹面は銀色。体側部背方の数列のうろこにはそれぞれ1黒点があり、数縦列に並ぶ。上顎後縁が下方に曲がらない。</dd>
+                            <dt>分布域</dt>
+                            <dd>新潟県、松島湾以南～南シナ海北部。</dd>
+                            <dt>生息環境</dt>
+                            <dd>内湾性で、産卵期には汽水域に進入する。</dd>
+                            <dt>産卵期</dt>
+                            <dd>春~初夏</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4~9月頃。4・6・9月間によく獲れる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/9B51E0/FFFFFF?text=Kataboshiiwashi+1" alt="カタボシイワシの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>カタボシイワシ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>からだは細長いものが多く、平たい。鰓蓋後端にわずかであるが、内側に黒点がある。大型の鮮時の個体は体背部の暗青色部分の下に薄いオレンジ色もしくは黄色、腹部は銀白色となっている。</dd>
+                            <dt>分布域</dt>
+                            <dd>南日本、琉球列島、東シナ海中部，東南アジア周辺海域等に幅広く分布。
+                            茨城県に北限が更新され, さらなる分布の拡大や個体数の増加が想定される。</dd>
+                            <dt>生息環境</dt>
+                            <dd>沿岸域に生息する。沿岸で群れを成している。</dd>
+                            <dt>産卵期</dt>
+                            <dd>不確かだが、6~7月とされている。</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>4~9月頃。特に6月頃でとても沢山漁獲される。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/2F80ED/FFFFFF?text=Gima+1" alt="ギマの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>ギマ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>背鰭の第1棘は長く、腹鰭は1対の強大な棘となる。尾鰭は湾入する。背部の体色は銀色もしくは灰色、腹部は白色となっている。胸鰭と尾鰭は一様に黄色。背鰭と臀鰭には黄色斑があり、背鰭棘基部は暗色となる。</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道南部~九州南岸の太平洋沿岸、新潟県~山口県日本海沿岸、瀬戸内海(少ない)。西太平洋の亜熱帯~熱帯海域。</dd>
+                            <dt>生息環境</dt>
+                            <dd>沿岸域の浅瀬の底層部に生息する。幼魚は汽水域やアマモ場にも出現する。</dd>
+                            <dt>産卵期</dt>
+                            <dd>6~7月頃。内湾に入り込んできて産卵する。</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>5~7月頃。特に5月で100匹以上が漁獲される。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title toxic-title lang-ja">毒のある生き物</h2>
+                <h2 class="section-title toxic-title lang-en" style="display:none;">Poisonous Creatures</h2>
+                
+                <p class="toxic-warning lang-ja">注意: これらの生き物には毒があり、触ると危険です。</p>
+                <p class="toxic-warning lang-en" style="display:none;">Warning: These creatures are venomous/poisonous. Do not touch.</p>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/F2C94C/000000?text=Hakofugu+1" alt="ハコフグの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>ハコフグ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体の横断面は四角形。眼上棘と腹側隆起棘がない。吻部が突出しない。背隆起はない。
+                            成魚の頭部や尾鰭に小黒点はない。幼魚の体には小黒色円斑が散在する</dd>
+                            <dt>分布域</dt>
+                            <dd>北海道根室~九州南岸の太平洋沿岸、青森県~九州南岸の日本海・東シナ海、瀬戸内海。
+                            朝鮮半島南岸~香港。</dd>
+                            <dt>生息環境</dt>
+                            <dd>浅海の内湾</dd>
+                            <dt>産卵期</dt>
+                            <dd>春~夏頃</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>5~11月頃。各月に最低約1個体のペースで獲れる。特に、6~7月によく獲れる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/9B51E0/FFFFFF?text=Setominokasago+1" alt="セトミノカサゴの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>セトミノカサゴ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>胸鰭・背鰭も大きい。胸鰭は少なくとも臀鰭基底後半には達し、大半はそこを越える。
+                            下顎腹面は円滑。眼下骨域や前鰓蓋域に小棘が密に分布している。胸鰭を広げると、鮮やかな青色の波状が見える。尾鰭の先端が伸びている</dd>
+                            <dt>分布域</dt>
+                            <dd>千葉県館山湾~九州南部(鹿児島県大隈半島)の太平洋沿岸。インド洋・西部太平洋域。</dd>
+                            <dt>生息環境</dt>
+                            <dd>水深55~300m(通常80~110m)の砂泥底。</dd>
+                            <dt>産卵期</dt>
+                            <dd>不明</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>7~10月頃。9月頃以降によく見かける。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/333333/FFFFFF?text=Moyoufugu+1" alt="モヨウフグの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>モヨウフグ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体は小棘に覆われる。幼魚の体色は橙色で腹部に黒色の斜帯がある。
+                            成長するにつれ色彩は変化し、成魚では灰色もしくは白色の地色に黒色斑点が多数見られる。尾鰭に黒色点が散在する(成魚・幼体)。</dd>
+                            <dt>分布域</dt>
+                            <dd>新潟県~九州南岸の日本海・東シナ海沿岸、茨城県~九州南岸の太平洋沿岸、琉球列島、小笠原諸島。朝鮮半島~台湾。インド-太平洋。</dd>
+                            <dt>生息環境</dt>
+                            <dd>沿岸浅所に生息し、岩礁やサンゴ礁域に見られる。</dd>
+                            <dt>産卵期</dt>
+                            <dd>不明。</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>5~11月頃の各月に最低1個体は獲れる。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="fish-card">
+                    <div class="photo-gallery">
+                        <img src="https://via.placeholder.com/350x240/8B5A2B/FFFFFF?text=Kitamakura+1" alt="キタマクラの写真 1">
+                    </div>
+                    <div class="fish-content">
+                        <h3>キタマクラ</h3>
+                        <dl class="fish-details">
+                            <dt>特徴</dt>
+                            <dd>体色は茶褐色から灰褐色で、体側には2本の暗色縦帯がある。</dd>
+                            <dt>分布域</dt>
+                            <dd>福島県~九州南岸の太平洋沿岸、九州北岸~西岸などといったインド-西太平洋域。伊豆諸島、小笠原諸島。</dd>
+                            <dt>生息環境</dt>
+                            <dd>水深3~350m(通常:30m以浅)の岩礁帯、転石帯、サンゴ礁、砂底域など</dd>
+                            <dt>産卵期</dt>
+                            <dd>夏</dd>
+                            <dt>獲れる時期</dt>
+                            <dd>7~9月頃。他の月に比べて、8月頃に獲れている。</dd>
+                        </dl>
+                    </div>
+                </article>
+
+            </section>
+
+        </div> </div> </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/common.js"></script>
+
+</body>
+</html>
