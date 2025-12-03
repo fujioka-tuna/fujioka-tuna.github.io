@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>キッズ生き物図鑑 | 三保地引網</title>
+  <link rel="stylesheet" href="/common.css">
+
+  <style>
+    .main-content {
+        background-color: #FFF9E5;
+        font-family: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", sans-serif;
+        color: #5D4037;
+        padding: 4rem 0;
+    }
+
+    .page-header {
+        background-color: #FFB74D;
+        text-align: center;
+        padding: 3rem 1rem;
+        border-bottom: 5px solid #F57C00;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        color: #FFF;
+        text-shadow: 2px 2px 0px #E65100;
+        margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+        color: #FFF;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .back-btn-area {
+        margin-top: 1.5rem;
+    }
+    .back-btn {
+        display: inline-block;
+        background-color: #FFF;
+        color: #F57C00;
+        padding: 0.5rem 1.5rem;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+    .back-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .kids-card {
+        background-color: #ffffff;
+        border: 4px solid #FFCC80;
+        border-radius: 20px;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+
+    .kids-card img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 2px solid #EEE;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .fish-name {
+        font-size: 1.8rem;
+        color: #E65100;
+        border-bottom: 3px dashed #FFB74D;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .kids-details dt {
+        font-weight: bold;
+        background-color: #FFE0B2;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        margin-bottom: 0.5rem;
+        color: #E65100;
+        display: inline-block;
+    }
+    
+    .kids-details dd {
+        margin-left: 0.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    .toxic-section {
+        background-color: #FFEBEE;
+        border: 4px solid #EF5350;
+        border-radius: 20px;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .toxic-title {
+        color: #C62828;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .toxic-warning {
+        text-align: center;
+        background-color: #C62828;
+        color: #FFF;
+        display: inline-block;
+        padding: 0.5rem 2rem;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 0 auto 3rem auto;
+        display: block;
+        width: fit-content;
+    }
+
+    .kids-card.toxic {
+        border-color: #EF5350;
+    }
+    .kids-card.toxic .fish-name {
+        color: #C62828;
+        border-bottom-color: #EF5350;
+    }
+    .kids-card.toxic dt {
+        background-color: #FFCDD2;
+        color: #C62828;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title">キッズ生き物図鑑</h1>
+        <p class="page-subtitle">三保(みほ)の海(うみ)の仲間(なかま)たち</p>
+        
+        <div class="back-btn-area">
+            <a href="/zukan.html" class="back-btn">← 図鑑(ずかん)にもどる</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/EB5757/FFFFFF?text=Madai" alt="マダイ">
+                <h2 class="fish-name">マダイ（真鯛）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>からだが赤くて、背中の青いキラキラした点々がおしゃれ！大人の魚になると、この青い点々は少なくなるよ。尾ビレの後ろが黒いこと、背中のヒレが整っていることも目印！</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>北海道から九州まで、日本のいろいろな海にいて、韓国や台湾の近くにも住んでいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>海の中の岩や砂があるところ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>春から初夏にかけて（4月〜6月くらい）。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月から12月くらいまで。特に6月にはたくさん獲れるよ！</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/F2994A/FFFFFF?text=Chidai" alt="チダイ">
+                <h2 class="fish-name">チダイ（血鯛）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>マダイに似ているけど、少し違うよ。エラのふちが赤くて、まるで血がついているみたいに見えることが名前の由来です！からだはピンク色と銀色っぽく、背中のヒレが長いよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>北海道の南から九州までの海や、瀬戸内海にもいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>海の底の岩や砂利があるところ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>秋（9月〜11月くらい）。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>春の終わりから秋にかけて。特に9月〜10月にはたくさん獲れるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/BDBDBD/FFFFFF?text=Hedai" alt="ヘダイ">
+                <h2 class="fish-name">ヘダイ（平鯛）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>体は銀色で、横から見ると平べったい形をしているよ。若い魚はヒレが黄色っぽい。身体が平たいことや、 口がへの字に見えることが名前の由来とも言われているよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>日本の広い範囲の海にいるよ。遠くのアフリカやオーストラリアの海にも仲間がいる！</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>海岸に近い岩場や、波が穏やかな入り江。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>春の終わりから夏の初めにかけて。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月から9月くらいまで。夏が終わるとあまり見かけなくなるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/4F4F4F/FFFFFF?text=Mutsu" alt="ムツ">
+                <h2 class="fish-name">ムツ</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>大人は金色っぽい茶色で、子供は少し金色をしているよ。しっぽのふちが黒っぽいのが特徴だよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>北海道から九州までの日本の海に広く住んでいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>子供のころは浅い海にいるけど、大人はとても深い岩場へ引っ越します。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>秋から春にかけて。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月ごろに、子供のムツがたくさん獲れます。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/56CCF2/FFFFFF?text=Maaji" alt="マアジ">
+                <h2 class="fish-name">マアジ（真鯵）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>体の中央に「ゼイゴ」と呼ばれる硬いトゲトゲのウロコが一列に並んでいるのが特徴。お刺身やフライでおなじみの魚だね。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>北海道から九州まで、日本の海ならどこにでもいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>海の真ん中から底の方を泳いでいるよ。子供のアジは岸の近くや入り江に入ってくることがあるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>場所によって違うけど、水温が暖かくなる春から夏にかけて卵を産むよ。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月から11月くらいまで。4月には子供のマアジがたくさん獲れるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/F2C94C/FFFFFF?text=Kaiwari" alt="カイワリ">
+                <h2 class="fish-name">カイワリ</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>背中は青っぽくて、お腹は銀色に光っているよ。ヒレが少し黄色いのも特徴。子供のころは体に6〜8本のしま模様があるけど、大きくなると消えちゃいます。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>北海道より南の日本の海や、もっと南の暖かい海にもいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>砂や泥がある海の底によくいるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>暖かい季節（5月〜11月くらい）。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>6月から9月くらい。特に6月によく獲れるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/F2C94C/FFFFFF?text=Shimaaji" alt="シマアジ">
+                <h2 class="fish-name">シマアジ（縞鯵）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>生きているときは、体の真ん中に黄色い線（シマ）が入っているから「シマアジ」と言います。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>日本の真ん中あたりから南の暖かい海に住んでいて、世界中の暖かい海にもいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>岸に近い海の中層から底の方を泳いでいるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>秋から冬にかけて。水温がちょうどよくなると元気になるよ。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>海の水が暖かくなる6月から8月ごろにたくさん獲れるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/828282/FFFFFF?text=Konoshiro" alt="コノシロ">
+                <h2 class="fish-name">コノシロ</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>背中のヒレの後ろが糸のように長く伸びていることや、体の横に黒い点々が並んでいるのが目印！お寿司の「コハダ」はこの魚の子供だよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>日本の真ん中より南の海に住んでいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>波が静かな入り江が好きで、卵を産むときは川の水が混ざる場所までやってくるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>春から夏の初めにかけて。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月から9月くらい。春や秋によく獲れるよ。</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/9B51E0/FFFFFF?text=Kataboshiiwashi" alt="カタボシイワシ">
+                <h2 class="fish-name">カタボシイワシ（肩星鰯）</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>体は平たくて細長いよ。エラの後ろに黒い点があるから「カタボシ」って名前がついたんだ。新鮮なときはオレンジや黄色っぽく見えることもあるよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>日本の南の方や、もっと南の温かい海にたくさんいるよ。最近は少し北の海でも見つかるようになってきたよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>岸に近い海で、みんなで集まって泳いでいるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>はっきりとは分からないけど、6月〜7月ごろと言われているよ。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>4月から9月くらい。特に6月にはとってもたくさん獲れるよ！</dd>
+                </dl>
+            </article>
+
+            <article class="kids-card">
+                <img src="https://placehold.co/600x400/2F80ED/FFFFFF?text=Gima" alt="ギマ">
+                <h2 class="fish-name">ギマ</h2>
+                <dl class="kids-details">
+                    <dt>👀 特徴</dt>
+                    <dd>背中とお腹に鋭いトゲがあるから気をつけて！体は銀色で、ヒレはきれいな黄色をしているよ。ヌルヌルした粘液を出すこともあるよ。</dd>
+
+                    <dt>🌏 分布域</dt>
+                    <dd>日本の南の方の海に住んでいるよ。</dd>
+
+                    <dt>🏠 生息環境</dt>
+                    <dd>岸に近い浅い海の底が好き。子供のころは川の水が混ざる場所でも見つかるよ。</dd>
+
+                    <dt>🥚 産卵時期</dt>
+                    <dd>6月〜7月ごろ。入り江に入ってきて卵を産むよ。</dd>
+
+                    <dt>📅 獲れる時期</dt>
+                    <dd>5月から7月くらい。5月には100匹以上も獲れることがあるよ！</dd>
+                </dl>
+            </article>
+
+
+            <section class="toxic-section">
+                <h2 class="toxic-title">⚠️ 毒(どく)がある魚(さかな)たち</h2>
+                <p class="toxic-warning">※さわらないでね！</p>
+
+                <article class="kids-card toxic">
+                    <img src="https://placehold.co/600x400/F2C94C/000000?text=Hakofugu" alt="ハコフグ">
+                    <h2 class="fish-name">ハコフグ</h2>
+                    <dl class="kids-details">
+                        <dt>👀 特徴</dt>
+                        <dd>名前の通り、体が四角い箱みたいな形をしているよ。大人は黒い点がないけど、子供は体に黒い水玉模様があってとてもかわいい！でも皮膚に毒があるから気をつけてね。</dd>
+
+                        <dt>🌏 分布域</dt>
+                        <dd>北海道から九州まで、日本のいろいろな海にいるよ。</dd>
+
+                        <dt>🏠 生息環境</dt>
+                        <dd>波が静かな浅い海が好きだよ。</dd>
+
+                        <dt>🥚 産卵時期</dt>
+                        <dd>春から夏にかけて。</dd>
+
+                        <dt>📅 獲れる時期</dt>
+                        <dd>5月から11月くらい。6月〜7月によく見つかるよ。</dd>
+                    </dl>
+                </article>
+
+                <article class="kids-card toxic">
+                    <img src="https://placehold.co/600x400/9B51E0/FFFFFF?text=Setominokasago" alt="セトミノカサゴ">
+                    <h2 class="fish-name">セトミノカサゴ</h2>
+                    <dl class="kids-details">
+                        <dt>👀 特徴</dt>
+                        <dd>ヒレが大きくてヒラヒラしていて、とても豪華に見える魚だよ。でも、ヒレのトゲには強い毒があるから絶対にさわっちゃダメ！胸のヒレを広げると、きれいな青い模様が見えるよ。</dd>
+
+                        <dt>🌏 分布域</dt>
+                        <dd>日本の温かい海に住んでいるよ。</dd>
+
+                        <dt>🏠 生息環境</dt>
+                        <dd>少し深い海の底の砂地にいるよ。</dd>
+
+                        <dt>🥚 産卵時期</dt>
+                        <dd>まだよく分かっていなくて、謎が多い魚だね。</dd>
+
+                        <dt>📅 獲れる時期</dt>
+                        <dd>7月から10月くらい。秋になるとよく見かけるようになるよ。</dd>
+                    </dl>
+                </article>
+
+                <article class="kids-card toxic">
+                    <img src="https://placehold.co/600x400/333333/FFFFFF?text=Moyoufugu" alt="モヨウフグ">
+                    <h2 class="fish-name">モヨウフグ</h2>
+                    <dl class="kids-details">
+                        <dt>👀 特徴</dt>
+                        <dd>お腹に小さなトゲトゲがあるよ。子供のころはお腹に黒い線があるけど、大人になると黒い斑点がたくさん出てくる。</dd>
+
+                        <dt>🌏 分布域</dt>
+                        <dd>日本の広い範囲の海にいるよ。南の島のサンゴ礁にも住んでいる。</dd>
+
+                        <dt>🏠 生息環境</dt>
+                        <dd>岸に近い浅い岩場やサンゴの海が好きだよ。</dd>
+
+                        <dt>🥚 産卵時期</dt>
+                        <dd>まだよく分かっていないんだ。</dd>
+
+                        <dt>📅 獲れる時期</dt>
+                        <dd>5月から11月くらいまで、毎月少しずつ獲れるよ。</dd>
+                    </dl>
+                </article>
+
+                <article class="kids-card toxic">
+                    <img src="https://placehold.co/600x400/8B5A2B/FFFFFF?text=Kitamakura" alt="キタマクラ">
+                    <h2 class="fish-name">キタマクラ</h2>
+                    <dl class="kids-details">
+                        <dt>👀 特徴</dt>
+                        <dd>体は茶色っぽくて、横に2本の暗い色の線があるよ。名前に「北枕（きたまくら）」とついているのは、食べると死んでしまう（北枕で寝かされる）という怖い意味があるからだよ。絶対に食べちゃダメだよ！</dd>
+
+                        <dt>🌏 分布域</dt>
+                        <dd>日本のあちこちの海にいるよ。南の島にもたくさんいるんだ。</dd>
+
+                        <dt>🏠 生息環境</dt>
+                        <dd>岩場やサンゴ礁など、隠れられる場所が好きだよ。</dd>
+
+                        <dt>🥚 産卵時期</dt>
+                        <dd>夏ごろとされているよ。</dd>
+
+                        <dt>📅 獲れる時期</dt>
+                        <dd>7月から9月くらい。真夏の8月によく獲れるよ。</dd>
+                    </dl>
+                </article>
+            </section>
+
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/common.js"></script>
+
+</body>
+</html>
