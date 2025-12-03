@@ -9,22 +9,19 @@
 
   <style>
     /* === キッズページ専用スタイル === */
-    
-    /* メインコンテンツの背景を明るく */
     .main-content {
-        background-color: #FFF9E5; /* 優しいクリーム色 */
-        font-family: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", sans-serif; /* 丸ゴシック体優先 */
-        color: #5D4037;
+        background-color: #FFF9E5; /* クリーム色 */
+        font-family: "Hiragino Maru Gothic ProN", "Rounded Mplus 1c", sans-serif; /* 丸ゴシック体を優先 */
+        color: #5D4037; /* 文字色は焦げ茶色で優しく */
         padding: 4rem 0;
     }
 
-    /* ページヘッダー（子供向けアレンジ） */
+    /* ページタイトルのエリア（共通ヘッダーの下） */
     .page-header {
-        background-color: #FFB74D;
+        background-color: #FFB74D; /* オレンジ色 */
         text-align: center;
         padding: 3rem 1rem;
         border-bottom: 5px solid #F57C00;
-        position: relative;
     }
 
     .page-title {
@@ -40,7 +37,7 @@
         font-weight: bold;
     }
 
-    /* 「もどる」ボタン */
+    /* 「図鑑にもどる」ボタン */
     .back-btn-area {
         margin-top: 1.5rem;
     }
@@ -55,19 +52,18 @@
         box-shadow: 0 4px 0 rgba(0,0,0,0.1);
         transition: transform 0.2s;
     }
-    .back-btn:active {
-        transform: translateY(2px);
-        box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+    .back-btn:hover {
+        transform: translateY(-2px);
     }
 
-    /* --- カードデザイン --- */
+    /* --- カードデザイン（子供向け） --- */
     .kids-card {
         background-color: #ffffff;
-        border: 4px solid #FFCC80;
-        border-radius: 20px;
+        border: 4px solid #FFCC80; /* 枠線を太く */
+        border-radius: 20px; /* 丸みを強く */
         margin-bottom: 3rem;
         padding: 2rem;
-        box-shadow: 0 8px 0 rgba(0,0,0,0.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.05);
     }
 
     .kids-card img {
@@ -111,7 +107,7 @@
 
     /* --- 毒魚セクション --- */
     .toxic-section {
-        background-color: #FFEBEE;
+        background-color: #FFEBEE; /* 赤っぽい背景 */
         border: 4px solid #EF5350;
         border-radius: 20px;
         padding: 2rem;
