@@ -31,6 +31,31 @@
         color: var(--text-secondary);
     }
 
+    /* --- 子供向けページリンクボタン（追加部分） --- */
+    .kids-link-area {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .kids-btn {
+        display: inline-block;
+        background-color: #F2994A; /* 親しみやすいオレンジ色 */
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0.8rem 2rem;
+        border-radius: 50px; /* 丸いボタン */
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(242, 153, 74, 0.4); /* 影 */
+        transition: all 0.3s ease;
+    }
+
+    .kids-btn:hover {
+        background-color: #e67e22;
+        transform: translateY(-2px); /* 浮き上がるアニメーション */
+        box-shadow: 0 6px 14px rgba(242, 153, 74, 0.6);
+    }
+
     .content-section {
         padding: 4rem 0;
         border-bottom: 1px solid var(--border-color);
@@ -110,7 +135,7 @@
         color: #c0392b; /* 警告色 */
     }
     .toxic-warning {
-        background-color: #fbeee
+        background-color: #fbeee;
         color: #c0392b;
         border: 1px solid #e74c3c;
         padding: 1rem;
@@ -132,7 +157,14 @@
         <h1 class="page-title lang-en" style="display:none;">Miho Creature Guide</h1>
         <p class="page-subtitle lang-ja">地引網で獲れる生き物たち</p>
         <p class="page-subtitle lang-en" style="display:none;">Creatures caught with the beach seine</p>
-    </div>
+
+        <div class="kids-link-area">
+            <a href="kodomo/kodomozukan.html" class="kids-btn">
+                <span class="lang-ja">こどもようページはこちら</span>
+                <span class="lang-en" style="display:none;">For Kids (Click Here)</span>
+            </a>
+        </div>
+        </div>
 
     <div class="main-content">
         <div class="container">
