@@ -31,7 +31,6 @@
         color: var(--text-secondary);
     }
 
-    /* --- 子供向けページリンクボタン --- */
     .kids-link-area {
         margin-top: 2rem;
         text-align: center;
@@ -39,20 +38,20 @@
 
     .kids-btn {
         display: inline-block;
-        background-color: #F2994A; /* 親しみやすいオレンジ色 */
+        background-color: #F2994A;
         color: #ffffff;
         font-size: 1.1rem;
         font-weight: bold;
         padding: 0.8rem 2rem;
-        border-radius: 50px; /* 丸いボタン */
+        border-radius: 50px;
         text-decoration: none;
-        box-shadow: 0 4px 10px rgba(242, 153, 74, 0.4); /* 影 */
+        box-shadow: 0 4px 10px rgba(242, 153, 74, 0.4);
         transition: all 0.3s ease;
     }
 
     .kids-btn:hover {
         background-color: #e67e22;
-        transform: translateY(-2px); /* 浮き上がるアニメーション */
+        transform: translateY(-2px);
         box-shadow: 0 6px 14px rgba(242, 153, 74, 0.6);
     }
 
@@ -72,33 +71,31 @@
         font-weight: 600;
     }
 
-    /* === 図鑑ページ専用CSS === */
-
     .fish-card {
         background-color: #ffffff;
         border-radius: 12px;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
         margin-bottom: 3rem;
-        overflow: hidden; /* 角丸を効かせるため */
+        overflow: hidden;
     }
     
     .photo-gallery {
         display: flex;
-        overflow-x: auto; /* 写真を横スクロール */
-        scroll-snap-type: x mandatory; /* スクロールをスナップ */
-        gap: 8px; /* 写真間の隙間 */
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 8px;
         padding: 8px;
-        background-color: #f4f7f6; /* ギャラリーの背景色 */
+        background-color: #f4f7f6;
+        justify-content: center;
     }
 
-    /* --- 写真のスタイル調整 --- */
     .photo-gallery img {
-        width: 85%; /* 画面幅の85% (少し大きく) */
-        max-width: 500px; /* PCでの最大幅 (350px -> 500pxへ拡大) */
-        aspect-ratio: 4 / 3; /* アスペクト比を4:3に固定 */
+        width: 85%;
+        max-width: 500px;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
         border-radius: 8px;
-        scroll-snap-align: center; /* 中央でスナップ */
+        scroll-snap-align: center;
     }
 
     .fish-content {
@@ -131,9 +128,8 @@
         line-height: 1.7;
     }
     
-    /* --- 毒魚セクション --- */
     .toxic-title {
-        color: #c0392b; /* 警告色 */
+        color: #c0392b;
     }
     .toxic-warning {
         background-color: #fbeee;
