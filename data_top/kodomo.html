@@ -61,12 +61,15 @@
         box-shadow: 0 8px 16px rgba(0,0,0,0.05);
     }
 
+    /* --- 画像のスタイル調整（アスペクト比固定） --- */
     .kids-card img {
         width: 100%;
         max-width: 600px;
-        height: auto;
-        max-height: 350px;
+        /* アスペクト比を4:3（横長）に固定 */
+        aspect-ratio: 4 / 3;
+        /* 枠からはみ出る部分はトリミング */
         object-fit: cover;
+        
         border-radius: 15px;
         border: 2px solid #EEE;
         display: block;
