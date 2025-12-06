@@ -43,13 +43,13 @@
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
-        text-align: justify; /* テキストを両端揃え */
+        text-align: justify;
     }
 
     .method-list {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem; /* 各ステップ間の余白 */
+        gap: 2.5rem;
         margin-top: 2.5rem;
     }
     .method-step {
@@ -62,8 +62,8 @@
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
     }
     .method-image {
-        width: 300px; /* 画像の幅を固定 */
-        height: auto; /* 高さを自動にし、比率を維持 */
+        width: 300px;
+        height: auto;
         object-fit: cover;
         border-radius: 8px;
         flex-shrink: 0;
@@ -71,7 +71,7 @@
     .method-text h4 {
         font-size: 1.4rem;
         font-weight: 700;
-        color: var(--accent-color); /* タイトル色 */
+        color: var(--accent-color);
         margin-bottom: 0.75rem;
     }
     .method-text p {
@@ -79,17 +79,15 @@
         color: var(--text-primary);
     }
 
-    /* スマートフォン表示 */
     @media (max-width: 768px) {
         .method-step {
-            flex-direction: column; /* 画像とテキストを縦積みに */
+            flex-direction: column;
             align-items: flex-start;
             padding: 1rem;
         }
         .method-image {
             width: 100%;
-            height: auto; /* 高さを自動にし、比率を維持 */
-            /* aspect-ratio: 16 / 10; */ /* 元の比率を維持するため削除 */
+            height: auto;
         }
         .method-text h4 {
             font-size: 1.25rem;
@@ -131,7 +129,7 @@
 
                 <div class="method-list">
                     <div class="method-step">
-                        <img src="/images/step1.jpg" alt="船に網を積む様子" class="method-image">
+                        <img src="../images/step1.jpg" alt="船に網を積む様子" class="method-image">
                         <div class="method-text">
                             <h4 class="lang-ja">① 準備</h4>
                             <h4 class="lang-en" style="display:none;">1. Preparation</h4>
@@ -141,7 +139,7 @@
                     </div>
 
                     <div class="method-step">
-                        <img src="/images/step2.jpg" alt="船で網を張る様子" class="method-image">
+                        <img src="../images/step2.jpg" alt="船で網を張る様子" class="method-image">
                         <div class="method-text">
                             <h4 class="lang-ja">② 網を張る</h4>
                             <h4 class="lang-en" style="display:none;">2. Casting the Net</h4>
@@ -151,7 +149,7 @@
                     </div>
 
                     <div class="method-step">
-                        <img src="/images/step3.jpg" alt="船が海岸に戻る様子" class="method-image">
+                        <img src="../images/step3.jpg" alt="船が海岸に戻る様子" class="method-image">
                         <div class="method-text">
                             <h4 class="lang-ja">③ 網の片方を海岸へ</h4>
                             <h4 class="lang-en" style="display:none;">3. Returning to Shore</h4>
@@ -161,7 +159,7 @@
                     </div>
 
                     <div class="method-step">
-                        <img src="/images/step4.jpg" alt="網を引く様子" class="method-image">
+                        <img src="../images/step4.jpg" alt="網を引く様子" class="method-image">
                         <div class="method-text">
                             <h4 class="lang-ja">④ 網を引く</h4>
                             <h4 class="lang-en" style="display:none;">4. Hauling the Net</h4>
