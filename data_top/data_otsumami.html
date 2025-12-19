@@ -6,6 +6,23 @@
   <title>今日の肴 | 三保地引網</title>
   <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/common.css">
+  <style>
+    /* Coming Soon 表示用のスタイル */
+    .coming-soon-placeholder {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* 正方形を維持 */
+        background-color: #e0e0e0; /* グレーの背景色 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #757575; /* テキストの色 */
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-radius: 12px 12px 0 0; /* カードの上部に合わせた角丸 */
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,7 +44,10 @@
         <div class="container">
             <div class="recipe-grid">
                 <article class="recipe-card">
-                    <img src="https://via.placeholder.com/400x400/EB5757/ffffff?text=Tai+Meshi" alt="マダイの鯛めし" class="recipe-card-image">
+                    <div class="coming-soon-placeholder">
+                        <span class="lang-ja">Coming Soon</span>
+                        <span class="lang-en" style="display:none;">Coming Soon</span>
+                    </div>
                     <div class="recipe-card-content">
                         <h3 class="recipe-title lang-ja">マダイの鯛めし</h3>
                         <h3 class="recipe-title lang-en" style="display:none;">Madai no Taimeshi (Sea Bream Rice)</h3>
@@ -71,7 +91,10 @@
                 </article>
 
                 <article class="recipe-card">
-                    <img src="https://via.placeholder.com/400x400/828282/ffffff?text=Konoshiro+Suzuke" alt="コノシロの酢漬け" class="recipe-card-image">
+                    <div class="coming-soon-placeholder">
+                        <span class="lang-ja">Coming Soon</span>
+                        <span class="lang-en" style="display:none;">Coming Soon</span>
+                    </div>
                     <div class="recipe-card-content">
                         <h3 class="recipe-title lang-ja">コノシロの酢漬け</h3>
                         <h3 class="recipe-title lang-en" style="display:none;">Konoshiro no Suzuke (Pickled Gizzard Shad)</h3>
