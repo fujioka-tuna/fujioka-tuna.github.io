@@ -7,74 +7,29 @@
   <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/common.css">
   <style>
-    /* グリッドレイアウトの定義 */
-    .recipe-grid {
-        display: grid;
-        /* 横幅300px以上で自動折り返し・均等配置 */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    /* レシピカードのスタイル */
-    .recipe-card {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden; /* 角丸を適用するために必要 */
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Coming Soon 画像プレースホルダー */
+    /* Coming Soon 表示用のスタイル 
+       高さを固定値(250px)にすることで、横並びの際にガタガタになるのを防ぎます。
+    */
     .coming-soon-placeholder {
         width: 100%;
-        /* 16:9 の比率に固定（YouTubeのサムネイル等と同じ一般的で見やすい比率） */
-        aspect-ratio: 16 / 9;
+        height: 250px; /* 高さを固定して不揃いを防ぐ */
         background-color: #e0e0e0;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #757575;
+        color: #888888;
         font-size: 1.5rem;
         font-weight: 700;
-        letter-spacing: 0.05em;
+        border-radius: 8px 8px 0 0; /* カードの角丸に合わせる（CSSに合わせて調整してください） */
         text-transform: uppercase;
-    }
-
-    .recipe-card-content {
-        padding: 1.5rem;
-    }
-
-    .recipe-title {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
-        color: var(--text-primary, #333);
+        letter-spacing: 0.05em;
     }
     
-    .recipe-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #555;
-        margin-bottom: 1.5rem;
-    }
-
-    .recipe-section-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-left: 4px solid var(--accent-color, #005f6b);
-        padding-left: 0.8rem;
-        margin-bottom: 0.8rem;
-        color: var(--text-primary, #333);
-    }
-
-    .recipe-ingredients, .recipe-steps {
-        margin-left: 1.2rem;
-        line-height: 1.8;
-        color: #444;
-    }
-    .recipe-steps li {
-        margin-bottom: 0.5rem;
+    /* レシピカード内の画像とプレースホルダーの余白調整 */
+    .recipe-card img,
+    .coming-soon-placeholder {
+        margin-bottom: 0; /* 画像の下の余白をリセット */
+        display: flex; /* 隙間対策 */
     }
   </style>
 </head>
@@ -96,13 +51,13 @@
     </div>
     <div class="main-content">
         <div class="container">
-            
             <div class="recipe-grid">
                 <article class="recipe-card">
                     <div class="coming-soon-placeholder">
                         <span class="lang-ja">Coming Soon</span>
                         <span class="lang-en" style="display:none;">Coming Soon</span>
                     </div>
+                    
                     <div class="recipe-card-content">
                         <h3 class="recipe-title lang-ja">マダイの鯛めし</h3>
                         <h3 class="recipe-title lang-en" style="display:none;">Madai no Taimeshi (Sea Bream Rice)</h3>
@@ -150,6 +105,7 @@
                         <span class="lang-ja">Coming Soon</span>
                         <span class="lang-en" style="display:none;">Coming Soon</span>
                     </div>
+
                     <div class="recipe-card-content">
                         <h3 class="recipe-title lang-ja">コノシロの酢漬け</h3>
                         <h3 class="recipe-title lang-en" style="display:none;">Konoshiro no Suzuke (Pickled Gizzard Shad)</h3>
