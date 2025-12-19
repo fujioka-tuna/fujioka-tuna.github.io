@@ -7,20 +7,74 @@
   <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
   <link rel="stylesheet" href="/common.css">
   <style>
-    /* Coming Soon 表示用のスタイル */
+    /* グリッドレイアウトの定義 */
+    .recipe-grid {
+        display: grid;
+        /* 横幅300px以上で自動折り返し・均等配置 */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* レシピカードのスタイル */
+    .recipe-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden; /* 角丸を適用するために必要 */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Coming Soon 画像プレースホルダー */
     .coming-soon-placeholder {
         width: 100%;
-        aspect-ratio: 1 / 1; /* 正方形を維持 */
-        background-color: #e0e0e0; /* グレーの背景色 */
+        /* 16:9 の比率に固定（YouTubeのサムネイル等と同じ一般的で見やすい比率） */
+        aspect-ratio: 16 / 9;
+        background-color: #e0e0e0;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #757575; /* テキストの色 */
-        font-size: 1.8rem;
-        font-weight: 600;
-        border-radius: 12px 12px 0 0; /* カードの上部に合わせた角丸 */
-        text-transform: uppercase;
+        color: #757575;
+        font-size: 1.5rem;
+        font-weight: 700;
         letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .recipe-card-content {
+        padding: 1.5rem;
+    }
+
+    .recipe-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary, #333);
+    }
+    
+    .recipe-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 1.5rem;
+    }
+
+    .recipe-section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-left: 4px solid var(--accent-color, #005f6b);
+        padding-left: 0.8rem;
+        margin-bottom: 0.8rem;
+        color: var(--text-primary, #333);
+    }
+
+    .recipe-ingredients, .recipe-steps {
+        margin-left: 1.2rem;
+        line-height: 1.8;
+        color: #444;
+    }
+    .recipe-steps li {
+        margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -42,6 +96,7 @@
     </div>
     <div class="main-content">
         <div class="container">
+            
             <div class="recipe-grid">
                 <article class="recipe-card">
                     <div class="coming-soon-placeholder">
