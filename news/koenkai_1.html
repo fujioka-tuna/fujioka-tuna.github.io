@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>講演会のご報告 | 三保地引網</title>
+  <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="/common.css">
+  
+  <style>
+    /* 共通設定 */
+    .main-content {
+        background-color: var(--bg-content);
+        padding: 4rem 0;
+        min-height: 60vh;
+    }
+    .page-header {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #e3d9cd;
+    }
+    
+    /* ニュース詳細ページ用のスタイル */
+    .news-article {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .news-hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .news-text {
+        line-height: 1.8;
+        text-align: justify;
+        font-size: 1.05rem;
+    }
+    .news-date {
+        display: block;
+        text-align: right;
+        color: #666;
+        margin-bottom: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .back-btn {
+        display: block;
+        margin: 3rem auto 0;
+        text-align: center;
+        width: fit-content;
+        padding: 0.8rem 2rem;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+    }
+    .back-btn:hover {
+        background-color: #555;
+    }
+    
+    /* 開催概要テーブル */
+    .event-info {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+    }
+    .event-info th, .event-info td {
+        border-bottom: 1px solid #eee;
+        padding: 1rem;
+        text-align: left;
+    }
+    .event-info th {
+        width: 30%;
+        background-color: #f9f9f9;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title lang-ja">お知らせ</h1>
+        <h1 class="page-title lang-en" style="display:none;">News</h1>
+    </div>
+    
+    <div class="main-content">
+        <div class="container">
+            
+            <article class="news-article">
+                <time class="news-date">2025.12.20</time>
+
+                <h2 class="section-title lang-ja" style="text-align:left; margin-bottom:1.5rem;">清水テルサで講演会を実施しました。</h2>
+                <h2 class="section-title lang-en" style="display:none; text-align:left; margin-bottom:1.5rem;">We held a lecture at Shimizu Terusa.</h2>
+
+                <img src="koenkai_1.jpeg" alt="講演会の様子" class="news-hero-image">
+
+                <div class="news-text">
+                    <p class="lang-ja">
+                        本日、静岡市東部勤労者福祉センター 清水テルサ にて、藤岡研究室による活動報告と講演会を開催いたしました。<br><br>
+                        当日は多くの皆様にご来場いただき、誠にありがとうございました。<br>
+                        講演では、今年度の三保地引網調査で得られたデータの解説や、三保の海で見られる魚たちの季節変化についてお話しさせていただきました。質疑応答の時間には貴重なご意見もいただき、大変有意義な時間となりました。
+                    </p>
+                    <p class="lang-en" style="display:none;">
+                        Today, we held an activity report and lecture by the Fujioka Laboratory at the Shizuoka City Eastern Worker's Welfare Center "Shimizu Terusa."<br><br>
+                        We would like to thank everyone who attended.<br>
+                        In the lecture, we explained the data obtained from this year's Miho beach seine surveys and discussed the seasonal changes of fish found in the Miho sea. We also received valuable feedback from the local community during the Q&A session, making it a very meaningful event.
+                    </p>
+
+                    <h4 style="margin-top:2rem; font-size:1.1rem;">開催概要</h4>
+                    <table class="event-info">
+                        <tr>
+                            <th class="lang-ja">日時</th>
+                            <td class="lang-ja">2025年12月20日（土） 14:00〜16:00（終了）</td>
+                            <th class="lang-en" style="display:none;">Date</th>
+                            <td class="lang-en" style="display:none;">Saturday, December 20, 2025<br>14:00 - 16:00 (Finished)</td>
+                        </tr>
+                        <tr>
+                            <th class="lang-ja">場所</th>
+                            <td class="lang-ja">清水テルサ 6階</td>
+                            <th class="lang-en" style="display:none;">Venue</th>
+                            <td class="lang-en" style="display:none;">Shimizu Terusa, 1st Floor Hall</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <a href="../index.html" class="back-btn lang-ja">トップページへ戻る</a>
+                <a href="../index.html" class="back-btn lang-en" style="display:none;">Back to Top</a>
+
+            </article>
+
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="/common.js"></script>
+</body>
+</html>
