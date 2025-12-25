@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HPの公開を開始しました | 三保地引網</title>
+  <link rel="icon" href="/tab_icon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="/common.css">
+  
+  <style>
+    /* 共通設定（参照元と同じ） */
+    .main-content {
+        background-color: var(--bg-content);
+        padding: 4rem 0;
+        min-height: 60vh; /* コンテンツが少ない時もフッターが浮かないように */
+    }
+    
+    .page-header {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #e3d9cd;
+    }
+
+    /* ニュース詳細ページ用の追加スタイル */
+    .news-article {
+        max-width: 800px; /* 記事が横に広がりすぎないように制限 */
+        margin: 0 auto;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .news-hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .news-text {
+        line-height: 1.8;
+        text-align: justify;
+        font-size: 1.05rem;
+    }
+
+    .news-date {
+        display: block;
+        text-align: right;
+        color: #666;
+        margin-bottom: 1rem;
+        font-family: 'Roboto', sans-serif; /* 数字を見やすく */
+    }
+
+    .back-btn {
+        display: block;
+        margin: 3rem auto 0;
+        text-align: center;
+        width: fit-content;
+        padding: 0.8rem 2rem;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+    }
+    .back-btn:hover {
+        background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="page-header">
+        <h1 class="page-title lang-ja">お知らせ</h1>
+        <h1 class="page-title lang-en" style="display:none;">News</h1>
+    </div>
+    
+    <div class="main-content">
+        <div class="container">
+            
+            <article class="news-article">
+                <time class="news-date">2025.12.01</time>
+
+                <h2 class="section-title lang-ja" style="text-align:left; margin-bottom:1.5rem;">HPの公開を開始しました。</h2>
+                <h2 class="section-title lang-en" style="display:none; text-align:left; margin-bottom:1.5rem;">We have launched our website.</h2>
+
+                <img src="hp_start.jpeg" alt="HP公開イメージ" class="news-hero-image">
+
+                <div class="news-text">
+                    <p class="lang-ja">
+                        この度、三保地引網の活動や東海大学藤岡研究室の調査内容を発信するためのウェブサイトを公開いたしました。<br><br>
+                        本サイトでは、過去の調査データの閲覧や、今後のイベント情報、活動報告などを随時更新していく予定です。<br>
+                        地引網を通じて得られた科学的な知見を、地域の皆様や興味を持ってくださる方々にわかりやすくお伝えできればと考えております。
+                    </p>
+                    <p class="lang-en" style="display:none;">
+                        We are pleased to announce the launch of our website to share information about the Miho Beach Seine activities and the research conducted by the Fujioka Laboratory at Tokai University.<br><br>
+                        On this site, we plan to update past survey data, upcoming event information, and activity reports.<br>
+                        We hope to share the scientific insights gained through beach seining with the local community and anyone interested in an easy-to-understand manner.
+                    </p>
+                </div>
+
+                <a href="../index.html" class="back-btn lang-ja">トップページへ戻る</a>
+                <a href="../index.html" class="back-btn lang-en" style="display:none;">Back to Top</a>
+
+            </article>
+
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="/common.js"></script>
+</body>
+</html>
