@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fujioka-tuna.github.io/sitemap.xml
