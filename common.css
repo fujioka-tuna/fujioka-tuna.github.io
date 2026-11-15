@@ -321,7 +321,7 @@ a {
     gap: 3rem;
 }
 .db-grid .card {
-    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
 }
 .card-link:hover .card-title,
 .card-link:focus-visible .card-title {
