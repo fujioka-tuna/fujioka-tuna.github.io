@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     restoreLanguage();
     window.addEventListener('pageshow', restoreLanguage);
 
-    fetch('/header.html', { cache: 'no-store' })
+    fetch('/header.html?v=b711d3e1445c', { cache: 'no-store' })
         .then(response => response.ok ? response.text() : Promise.reject('File not found'))
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error loading header:', error));
 
-    fetch('/footer.html', { cache: 'no-store' })
+    fetch('/footer.html?v=28555e505ad7', { cache: 'no-store' })
         .then(response => response.ok ? response.text() : Promise.reject('File not found'))
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
