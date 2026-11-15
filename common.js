@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    let currentLang = 'ja'; 
+    const languageStorageKey = 'miho-language';
+    let currentLang = 'ja';
+
+    window.setLanguage = function (language) {
+        currentLang = language === 'en' ? 'en' : 'ja';
+        try {
+            window.localStorage.setItem(languageStorageKey, currentLang);
+        } catch (error) {}
+        updateLanguageDisplay();
+    };
+
+    restoreLanguage();
+    window.addEventListener('pageshow', restoreLanguage);
 
     fetch('/header.html') 
         .then(response => response.ok ? response.text() : Promise.reject('File not found'))
@@ -74,8 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (langToggleBtn) {
             langToggleBtn.addEventListener('click', function () {
-                currentLang = (currentLang === 'ja') ? 'en' : 'ja';
-                updateLanguageDisplay(); 
+                window.setLanguage(currentLang === 'ja' ? 'en' : 'ja');
                 closeOtherDropdowns(null); 
             });
         }
@@ -116,7 +127,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function restoreLanguage() {
+        try {
+            currentLang = window.localStorage.getItem(languageStorageKey) === 'en' ? 'en' : 'ja';
+        } catch (error) {}
+        updateLanguageDisplay();
+    }
+
     function updateLanguageDisplay() {
+        document.documentElement.lang = currentLang;
+        window.currentLang = currentLang;
         const langToggleBtn = document.getElementById('lang-toggle');
         if (langToggleBtn) {
             langToggleBtn.textContent = currentLang === 'ja' ? 'English' : '日本語';

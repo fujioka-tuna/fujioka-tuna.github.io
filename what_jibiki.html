@@ -57,15 +57,16 @@
         align-items: center;
         gap: 2rem;
         background-color: #ffffff;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .method-step:last-child {
+        border-bottom: none;
     }
     .method-image {
         width: 300px;
         height: auto;
         object-fit: cover;
-        border-radius: 8px;
         flex-shrink: 0;
     }
     .method-text h4 {
@@ -83,7 +84,7 @@
         .method-step {
             flex-direction: column;
             align-items: flex-start;
-            padding: 1rem;
+            padding: 1rem 0;
         }
         .method-image {
             width: 100%;

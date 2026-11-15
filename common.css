@@ -285,39 +285,51 @@ a {
     transition: color 0.3s;
 }
 .news-title a:hover { color: var(--accent-color); }
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
+.highlights-grid,
 .db-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+}
+.card-link {
+    display: block;
+    padding: 3rem 0;
+}
+.card-link + .card-link {
+    border-top: 1px solid var(--border-color);
+}
+.card-link:first-child {
+    padding-top: 0;
+}
+.card-link:last-child {
+    padding-bottom: 0;
 }
 .card {
     background: var(--bg-content);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3rem;
 }
-.card:hover { 
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+.db-grid .card {
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+}
+.card-link:hover .card-title,
+.card-link:focus-visible .card-title {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+.card-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 0.5rem;
 }
 .card-image-wrapper { overflow: hidden; }
 .card-img {
   width: 100%;
   display: block;
   background-color: #ccc;
-  transition: transform 0.4s ease-out;
   object-fit: cover;
 }
-.card:hover .card-img { transform: scale(1.05); }
 .aspect-ratio-4-3 {
     aspect-ratio: 4 / 3;
 }
@@ -325,21 +337,19 @@ a {
     aspect-ratio: 16 / 9;
 }
 .card-content { 
-    padding: 1.5rem;
-    flex-grow: 1;
+    min-width: 0;
 }
 .card-title {
     font-size: 1.3rem;
     color: var(--text-primary);
     margin-bottom: 0.75rem;
+    transition: color 0.3s;
 }
 .calendar-container {
     max-width: 800px;
     margin: 0 auto;
     background: var(--bg-content);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 .calendar-header {
     display: flex;
@@ -412,8 +422,7 @@ a {
     margin-top: 2rem;
     padding: 2rem;
     background: #fafafa;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
     min-height: 100px;
 }
 #summary-date, #summary-date-en {
@@ -435,11 +444,12 @@ a {
 }
 .recipe-card {
     background: var(--bg-content);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
+}
+.recipe-card + .recipe-card {
+    border-top: 1px solid var(--border-color);
+    padding-top: 3rem;
 }
 .recipe-card-image {
     width: 40%;
@@ -624,6 +634,11 @@ a {
     display: flex; 
   }
   .content-section { padding: 4rem 0; }
+  .card,
+  .db-grid .card {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+  }
   .recipe-card {
       flex-direction: column;
   }
