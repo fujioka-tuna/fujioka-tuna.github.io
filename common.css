@@ -322,6 +322,7 @@ a {
 }
 .db-grid .card {
     grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+    align-items: start;
 }
 .card-link:hover .card-title,
 .card-link:focus-visible .card-title {
