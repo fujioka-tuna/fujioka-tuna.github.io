@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     restoreLanguage();
     window.addEventListener('pageshow', restoreLanguage);
 
-    fetch('/header.html') 
+    fetch('/header.html', { cache: 'no-store' })
         .then(response => response.ok ? response.text() : Promise.reject('File not found'))
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error loading header:', error));
 
-    fetch('/footer.html') 
+    fetch('/footer.html', { cache: 'no-store' })
         .then(response => response.ok ? response.text() : Promise.reject('File not found'))
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -127,11 +127,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function restoreLanguage() {
+    function restoreLanguage(event) {
+        const requestedLanguage = new URL(window.location.href).searchParams.get('lang');
+        let savedLanguage = null;
         try {
-            currentLang = window.localStorage.getItem(languageStorageKey) === 'en' ? 'en' : 'ja';
+            savedLanguage = window.localStorage.getItem(languageStorageKey);
         } catch (error) {}
-        updateLanguageDisplay();
+        const isValidLanguage = language => language === 'ja' || language === 'en';
+        let language = currentLang;
+        if (event && event.persisted && isValidLanguage(savedLanguage)) {
+            language = savedLanguage;
+        } else if (isValidLanguage(requestedLanguage)) {
+            language = requestedLanguage;
+        } else if (isValidLanguage(savedLanguage)) {
+            language = savedLanguage;
+        }
+        window.setLanguage(language);
     }
 
     function updateLanguageDisplay() {
@@ -146,6 +157,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         document.querySelectorAll('.lang-en').forEach(el => {
             el.style.display = currentLang === 'en' ? '' : 'none';
+        });
+        updateLanguageLinks();
+    }
+
+    function updateLanguageLinks() {
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('lang', currentLang);
+        if (currentUrl.href !== window.location.href) {
+            try {
+                window.history.replaceState(window.history.state, '', currentUrl.pathname + currentUrl.search + currentUrl.hash);
+            } catch (error) {}
+        }
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#') || link.hasAttribute('download')) {
+                return;
+            }
+            let targetUrl;
+            try {
+                targetUrl = new URL(href, window.location.href);
+            } catch (error) {
+                return;
+            }
+            if (targetUrl.origin !== window.location.origin || !['http:', 'https:'].includes(targetUrl.protocol)) {
+                return;
+            }
+            if (!/\.html?$/i.test(targetUrl.pathname) && !targetUrl.pathname.endsWith('/')) {
+                return;
+            }
+            targetUrl.searchParams.set('lang', currentLang);
+            link.setAttribute('href', targetUrl.pathname + targetUrl.search + targetUrl.hash);
         });
     }
 });

@@ -266,6 +266,12 @@ a {
     margin-bottom: 3rem;
     color: var(--text-secondary);
 }
+.site-introduction {
+    padding-top: 2rem;
+}
+.site-introduction-copy {
+    text-align: left;
+}
 .news-list { list-style: none; }
 .news-item {
     display: flex;
@@ -290,17 +296,21 @@ a {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
 }
-.card-link {
+.card-link,
+.highlight-item {
     display: block;
     padding: 3rem 0;
 }
-.card-link + .card-link {
+.card-link + .card-link,
+.highlight-item + .highlight-item {
     border-top: 1px solid var(--border-color);
 }
-.card-link:first-child {
+.card-link:first-child,
+.highlight-item:first-child {
     padding-top: 0;
 }
-.card-link:last-child {
+.card-link:last-child,
+.highlight-item:last-child {
     padding-bottom: 0;
 }
 .card {
@@ -322,6 +332,30 @@ a {
 .card-link:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 0.5rem;
+}
+.details-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 44px;
+    margin-top: 1.5rem;
+    padding: 0.65rem 1.75rem;
+    border-radius: 12px;
+    background-color: var(--text-primary);
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    transition: background-color 0.2s ease;
+}
+.details-link:hover,
+.details-link:focus-visible {
+    background-color: var(--text-secondary);
+}
+.details-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
 }
 .card-image-wrapper { overflow: hidden; }
 .card-img {
@@ -345,6 +379,38 @@ a {
     margin-bottom: 0.75rem;
     transition: color 0.3s;
 }
+#highlights .card {
+    align-items: start;
+}
+#highlights .card-content {
+    align-self: stretch;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+#highlights .details-link {
+    align-self: center;
+    justify-self: start;
+}
+#highlights .card-title,
+.db-grid .card-title {
+    font-size: 1.9rem;
+    width: 24rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-self: start;
+    padding: 0.15rem 1.5rem 0.4rem 0.6rem;
+    border-left: 2px solid var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    font-family: 'Noto Serif', 'Noto Serif JP', serif;
+    font-weight: 900;
+    line-height: 1.4;
+}
+#highlights .card-title-text,
+.db-grid .card-title-text {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+}
 .calendar-container {
     max-width: 800px;
     margin: 0 auto;
@@ -358,7 +424,7 @@ a {
     margin-bottom: 1.5rem;
 }
 .calendar-header button {
-    background: var(--accent-color);
+    background: var(--text-primary);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -367,7 +433,7 @@ a {
     transition: background-color 0.3s;
 }
 .calendar-header button:hover {
-    background: #005f6b;
+    background: var(--text-secondary);
 }
 #month-year {
     font-size: 1.5rem;
@@ -400,12 +466,12 @@ a {
     background-color: transparent;
 }
 .day.has-data {
-    background-color: var(--accent-color);
+    background-color: var(--text-secondary);
     color: white;
     font-weight: bold;
 }
 .day.has-data:hover {
-    background-color: #005f6b;
+    background-color: #666666;
 }
 .day.selected {
     background-color: var(--text-primary);
@@ -417,6 +483,19 @@ a {
 .day.has-data.selected {
     background-color: var(--text-primary);
     color: white;
+}
+.past-calendar .day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 100%;
+    max-width: 48px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 1;
 }
 #summary-container {
     margin-top: 2rem;
@@ -664,6 +743,10 @@ a {
   }
   .card-title {
       font-size: 4.5vw; /* 画面幅の4.5% */
+  }
+  #highlights .card-title,
+  .db-grid .card-title {
+      font-size: 5.8vw;
   }
   .recipe-title {
       font-size: 6vw; /* 画面幅の6% */
