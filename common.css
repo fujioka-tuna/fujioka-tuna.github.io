@@ -742,8 +742,14 @@ a {
 
   
   .hero h2 { 
-      font-size: 8vw; /* 画面幅の8% */
+      font-size: 9vw;
       line-height: 1.4;
+  }
+  .hero h2.lang-ja {
+      white-space: nowrap;
+  }
+  .hero .lang-en .hero-subtitle {
+      white-space: normal;
   }
   .page-title {
       font-size: 7vw; /* 画面幅の7% */
