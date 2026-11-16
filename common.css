@@ -227,10 +227,11 @@ a {
   max-width: 800px;
 }
 .hero h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-family: 'Noto Serif', 'Noto Serif JP', serif;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
     transform: scaleX(0.85);
     transform-origin: center;
@@ -743,7 +744,7 @@ a {
   
   .hero h2 { 
       font-size: 9vw;
-      line-height: 1.4;
+      line-height: 1.25;
   }
   .hero h2.lang-ja {
       white-space: nowrap;
