@@ -228,9 +228,12 @@ a {
 }
 .hero h2 {
     font-size: 3rem;
-    font-weight: bold;
+    font-family: 'Noto Serif', 'Noto Serif JP', serif;
+    font-weight: 900;
     line-height: 1.4;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    transform: scaleX(0.85);
+    transform-origin: center;
 }
 .hero-subtitle {
   white-space: nowrap;
