@@ -271,10 +271,42 @@ a {
     color: var(--text-secondary);
 }
 .site-introduction {
-    padding-top: 2rem;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: calc(33.506945vw + 3rem);
+    padding: 3rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.site-introduction::before {
+    content: '';
+    position: absolute;
+    inset: 1.5rem 0;
+    z-index: -1;
+    background: url('/images/shizuoka_fuji_contours_background.webp?v=ffa18601e986') center / 100% auto no-repeat;
+    opacity: 0.34;
+    pointer-events: none;
+}
+.site-introduction > .container {
+    flex: 1;
 }
 .site-introduction-copy {
     text-align: left;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.site-introduction-copy p + p {
+    margin-top: 0.75rem;
+}
+@media (max-width: 768px) {
+    .site-introduction {
+        padding: 2.5rem 0;
+    }
+    .site-introduction::before {
+        opacity: 0.26;
+    }
 }
 .news-list { list-style: none; }
 .news-item {
