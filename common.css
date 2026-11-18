@@ -286,7 +286,7 @@ a {
     inset: 1.5rem 0;
     z-index: -1;
     background: url('/images/shizuoka_fuji_contours_background.webp?v=ffa18601e986') center / 100% auto no-repeat;
-    opacity: 0.34;
+    opacity: 0.44;
     pointer-events: none;
 }
 .site-introduction > .container {
@@ -302,10 +302,31 @@ a {
 }
 @media (max-width: 768px) {
     .site-introduction {
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 5.5rem;
     }
     .site-introduction::before {
-        opacity: 0.26;
+        inset: 0;
+        /* Fit the full section height and keep the orange Miho marker in view. */
+        background-image: url('/images/shizuoka_fuji_contours_mobile.webp?v=7893bdfc5b61');
+        background-size: auto 100%;
+        background-position: 56.57% center;
+        opacity: 0.54;
+    }
+    .site-introduction::after {
+        content: '';
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+        z-index: -1;
+        width: min(21rem, calc(100% - 4rem));
+        aspect-ratio: 660 / 110;
+        /* Retain the attribution artwork from the PDF at a readable size. */
+        background: url('/images/shizuoka_fuji_contours_credit.webp?v=6f6483dcd391') right bottom / contain no-repeat;
+        opacity: 0.85;
+        pointer-events: none;
+    }
+    .site-introduction-copy {
+        color: var(--text-primary);
     }
 }
 .news-list { list-style: none; }
