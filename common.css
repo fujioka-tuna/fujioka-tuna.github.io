@@ -318,9 +318,9 @@ a {
         right: 2rem;
         bottom: 1rem;
         z-index: -1;
-        width: 14.322917%;
+        width: calc(100vw / 3);
         aspect-ratio: 660 / 110;
-        /* Preserve the attribution-to-image width ratio from the original PDF. */
+        /* Use one third of the screen width while preserving the artwork ratio. */
         background: url('/images/shizuoka_fuji_contours_credit.webp?v=6f6483dcd391') right bottom / contain no-repeat;
         opacity: 0.85;
         pointer-events: none;
